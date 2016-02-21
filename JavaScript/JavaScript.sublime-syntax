@@ -688,11 +688,11 @@ contexts:
         (?x)
         !(?!=)| # logical-not     right-to-left   right
         &&    | # logical-and     left-to-right   both
-        \|\|  | # logical-or      left-to-right   both
+        \|\|    # logical-or      left-to-right   both
       scope: keyword.operator.logical.js
     - match: |-
         (?x)
-        =(?!=)| # assignment      right-to-left   both
+        =(?!=) # assignment      right-to-left   both
       scope: keyword.operator.assignment.js
     - match: |-
         (?x)
@@ -706,7 +706,7 @@ contexts:
         \|=  | # assignment      right-to-left   both
         <<=  | # assignment      right-to-left   both
         >>=  | # assignment      right-to-left   both
-        >>>= | # assignment      right-to-left   both
+        >>>=   # assignment      right-to-left   both
       scope: keyword.operator.assignment.augmented.js
     - match: |-
         (?x)
@@ -971,7 +971,7 @@ contexts:
         1: support.type.object.process.js
         2: keyword.operator.accessor.js
         3: support.function.process.js
-    - match: (?<!\.)\b(exports|module(?:(\.)(exports|id|filename|loaded|parent|children)))?\b
+    - match: (?<!\.)\b(exports|module(?:(\.)(exports|id|filename|loaded|parent|children))?)\b
       captures:
         1: support.type.object.module.js
         2: keyword.operator.accessor.js
